@@ -1,0 +1,11 @@
+{
+  "bank_name": "State Bank of India",
+  "account_holder": "Vikram Singh",
+  "ifsc": "SBIN0001234",
+  "opening_balance": 5000.0,
+  "closing_balance": 8200.0,
+  "total_credits": 5000.0,
+  "total_debits": 1800.0,
+  "transaction_count": 2,
+  "balance_reconciled": true
+}

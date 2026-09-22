@@ -113,7 +113,7 @@ export class StatementAnalyzerService {
         if (calculatedDays > 0 && !isNaN(calculatedDays)) {
           periodDays = calculatedDays;
         }
-      } catch {}
+      } catch { }
     }
 
     const monthsCount = Math.max(1, periodDays / 30);

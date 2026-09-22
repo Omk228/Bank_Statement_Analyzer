@@ -1,0 +1,11 @@
+{
+  "bank_name": "HDFC Bank",
+  "account_holder": "Anita Verma",
+  "ifsc": "HDFC0000123",
+  "opening_balance": 25000.0,
+  "closing_balance": 42500.0,
+  "total_credits": 30000.0,
+  "total_debits": 12500.0,
+  "transaction_count": 3,
+  "balance_reconciled": true
+}

@@ -184,14 +184,30 @@ export const UploadModal: React.FC<UploadModalProps> = ({
           resetState();
         }, 800);
       } else {
-        const errCode = data.error?.code || 'INTERNAL_ERROR';
-        const customMessage = data.error?.message || ERROR_MESSAGES_MAP[errCode] || ERROR_MESSAGES_MAP.INTERNAL_ERROR;
+        let errCode = data.error?.code || data.detail?.code;
+        let customMessage = data.error?.message || data.detail?.message;
+
+        if (!customMessage && typeof data.detail === 'string') {
+          customMessage = data.detail;
+        }
+
+        // Try extracting [ERROR_CODE] pattern from message string
+        if (customMessage && !errCode) {
+          const match = customMessage.match(/^\[([A-Z0-9_]+)\]\s*(.*)$/);
+          if (match) {
+            errCode = match[1];
+            customMessage = match[2];
+          }
+        }
+
+        errCode = errCode || 'INTERNAL_ERROR';
+        customMessage = customMessage || ERROR_MESSAGES_MAP[errCode] || ERROR_MESSAGES_MAP.INTERNAL_ERROR;
         
         setUploadState('ERROR');
         setError({
           code: errCode,
           message: customMessage,
-          requestId: data.requestId,
+          requestId: data.requestId || data.processing?.request_id,
         });
       }
     } catch (err: any) {

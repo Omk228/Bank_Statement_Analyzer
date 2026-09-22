@@ -1,0 +1,11 @@
+{
+  "bank_name": "Axis Bank",
+  "account_holder": "Rajat Kumar Sharma",
+  "ifsc": "UTIB0000004",
+  "opening_balance": 10000.0,
+  "closing_balance": 34350.0,
+  "total_credits": 50000.0,
+  "total_debits": 25650.0,
+  "transaction_count": 4,
+  "balance_reconciled": true
+}

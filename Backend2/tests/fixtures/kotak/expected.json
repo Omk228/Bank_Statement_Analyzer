@@ -1,0 +1,11 @@
+{
+  "bank_name": "Kotak Mahindra Bank",
+  "account_holder": "Rani Devi",
+  "ifsc": "KKBK0004587",
+  "opening_balance": 50.64,
+  "closing_balance": 10.64,
+  "total_credits": 5.0,
+  "total_debits": 45.0,
+  "transaction_count": 3,
+  "balance_reconciled": true
+}

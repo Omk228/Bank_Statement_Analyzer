@@ -93,11 +93,10 @@ export const Dashboard: React.FC<DashboardProps> = ({ data, onOpenUploadModal })
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all duration-200 ${
-              activeTab === tab.id
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all duration-200 ${activeTab === tab.id
                 ? 'bg-sky-500/15 text-sky-300 border border-sky-500/30 shadow-sm'
                 : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'
-            }`}
+              }`}
           >
             {tab.icon}
             {tab.label}

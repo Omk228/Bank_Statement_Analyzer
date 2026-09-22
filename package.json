@@ -5,8 +5,9 @@
   "main": "backend/server.ts",
   "scripts": {
     "dev:server": "tsx watch backend/server.ts",
+    "dev:py": "python -m uvicorn Backend2.app.main:app --reload --host 127.0.0.1 --port 8000",
     "dev:client": "vite",
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev": "concurrently \"npm run dev:py\" \"npm run dev:client\"",
     "build:client": "vite build",
     "build:server": "tsc -p tsconfig.server.json",
     "build": "npm run build:client && npm run build:server",

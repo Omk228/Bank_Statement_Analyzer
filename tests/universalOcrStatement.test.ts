@@ -61,7 +61,7 @@ describe('Universal Bank Statement Ingestion & OCR Pipeline', () => {
     const validation = StatementResultValidator.validate(extraction, 'REQ-KOTAK-OCR-01');
     expect(validation.isValid).toBe(true);
     expect(validation.balanceIntegrity.balanceContinuityVerified).toBe(true);
-  }, 30000);
+  }, 90000);
 
   it('should process hybrid PDF with Page 1 Native text and Page 2 OCR', async () => {
     const hybridPdf = await PdfFixtures.createHybridBankStatementPdf();

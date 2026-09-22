@@ -28,7 +28,22 @@ Thumbs.db
 .gemini/
 .agents/
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.pytest_cache/
+*.pkl
+.coverage
+htmlcov/
+
 # Temporary / Scratch
 scratch/
+scratch_*
 tmp/
 temp/
+storage_data/
+Backend2/storage_data/
+
+

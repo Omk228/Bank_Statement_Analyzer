@@ -67,8 +67,8 @@ export class StatementUploadController {
           fileValidation.errorCode === StatementErrorCode.FILE_TOO_LARGE
             ? 413
             : fileValidation.errorCode === StatementErrorCode.INVALID_FILE_TYPE
-            ? 415
-            : 400;
+              ? 415
+              : 400;
 
         res.status(statusCode).json({
           success: false,

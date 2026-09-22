@@ -11,7 +11,7 @@ export const ProfileTab: React.FC<ProfileTabProps> = ({ data }) => {
   const identity = data?.analysis?.analytics?.consumer?.identity || {};
   const doc = data?.analysis?.document || {};
 
-  const name = doc.accountHolderName || primaryProfile.name || 'Account Holder';
+  const name = doc.accountHolderName || primaryProfile.name || 'Not detected';
   const accountNum = doc.accountNumber || primaryProfile.accountId || '—';
   const bank = doc.bankName || primaryProfile.bank || 'Bank Statement';
   const ifsc = doc.ifsc || primaryProfile.ifsc || '—';

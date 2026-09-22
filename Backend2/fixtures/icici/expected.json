@@ -1,0 +1,11 @@
+{
+  "bank_name": "ICICI Bank",
+  "account_holder": "Pooja Hegde",
+  "ifsc": "ICIC0000177",
+  "opening_balance": 15000.0,
+  "closing_balance": 30000.0,
+  "total_credits": 20000.0,
+  "total_debits": 5000.0,
+  "transaction_count": 2,
+  "balance_reconciled": true
+}
